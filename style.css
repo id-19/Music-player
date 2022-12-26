@@ -1,0 +1,193 @@
+body {
+    padding: 5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    --display: none;
+    background-color: rgb(128, 128, 128, 0.3);
+    /* background-image: linear-gradient(rgba(60, 80, 90, 0.5), rgba(120, 25, 77, 1)); */
+    transition: 1s;
+}
+
+#tile {
+    display: flex;
+    width: 70%;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5%;
+    box-shadow: 2px 4px 6px rgba(80, 80, 80, 0.5);
+    background-color: rgba(19, 222, 93, 0.25);
+    border-radius: 2%;
+    padding: 5%;
+}
+
+/*styling the images*/
+img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+    padding: 5%;
+}
+
+img#track-art {
+    width: 20%;
+    padding: 2%;
+    border-radius: 10%;
+}
+
+#volume-image {
+    width: 5%;
+}
+
+#prev-img,
+#next-img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*styling icons*/
+ion-icon {
+    font-size: 32px !important;
+}
+
+/*styling divs*/
+
+#album-art {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#controls-container {
+    position: relative;
+    height: 50%;
+    width: 60%;
+    background-image: linear-gradient(to right, rgba(44, 209, 52, 0.4), rgba(44, 209, 52, 1));
+    padding: 2%;
+    margin: 2%;
+    border-radius: 4%;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+    display: flex;
+}
+
+#controls-panel {
+    display: flex;
+    justify-content: center;
+    gap: 8%;
+    height: 50%;
+    align-items: center;
+    width: 95%;
+}
+
+#play-pause-button {
+    max-width: 10%;
+}
+
+#progress-bar-div {
+    max-width: fit-content;
+}
+
+#volume-container {
+    width: 10%;
+    display: inline-block;
+    align-items: center;
+    --op: 0;
+}
+
+#volume-container:hover {
+    --op: 1;
+}
+
+#shuffle-div {
+    width: 10%;
+}
+
+/*styling buttons*/
+
+button {
+
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    display: block;
+    padding: 10%;
+    border: 0;
+    background-color: rgba(0, 0, 0, .0);
+
+}
+
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .3)
+}
+
+
+
+
+
+
+/*temporary styling*/
+#test-element {
+    background-color: aqua;
+    /* width: 0px;
+    height: 0px; */
+    text-align: center;
+    display: none;
+}
+
+/*styling the volume slider <input> tag*/
+#volume-slider {
+    /*-webkit-appearance: none;*/
+    position: absolute;
+    background-color: rgb(0, 0, 0, --op);
+    transition: 2s;
+}
+
+/*styling the text of the progress bar*/
+#current-time,
+#total-time {
+    display: inline-block;
+    border: 0 2%;
+}
+
+/*styling artist and song name details*/
+h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 150%;
+}
+
+h3 {
+    margin-top: 3%;
+    font-size: medium;
+    text-align: center;
+}
+
+@media (max-width:700px) {
+    #controls-container {
+        width: 85%;
+    }
+
+    #tile {
+        width: 100%;
+    }
+
+
+    body {
+        gap: 100%;
+    }
+
+    #tile {
+        padding: 2%;
+    }
+
+}
+
+@media (max-width:500px) {
+    #controls-container {
+        width: 90%;
+    }
+}
